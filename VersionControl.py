@@ -37,7 +37,7 @@
 
 # Branches
 # A branch is a separate line of development in a Git repository.
-# It allows developers to work on new features, bug fixes, or experiments without affecting the main codebase.
+# It allows developers to work on new features, bug fixes, or experiments without affecting the main or production codebase.
 # The default branch in a Git repository is usually called "main" or "master".
 # Main (or Master) Branch: The primary branch where the stable version of the project is maintained (Production ready code). (prod)
 # Feature Branch: Used for developing new features and bug fixes (dev, qa, staging, etc.). (development code, testing, bug fixes, etc.)
@@ -51,11 +51,15 @@
 # Cloning is the process of creating a local copy of a remote repository.
 
 # Pull and Push
-# Pull: The process of fetching and integrating changes from a remote repository into your local repository.
-# Push: The process of sending your local commits to a remote (Centralized) repository.
+# Pull: The process of fetching and integrating changes from a remote repository into your local repository. (server -> local)
+# Push: The process of sending your local commits to a remote (Centralized) repository. (local -> server)
 
 # Three States of Git
-# Working Dir -> Staging Area (Commit)-> Local Repository -> (Push) Remote Repository
+# Working Dir 
+# -> git add <file name> Staging Area (git commit -m "")
+# -> Local Repository (git push -u branch name)
+# -> Remote Repository
+
 # 1. Working Directory: The files and directories that you are currently working on.
 # 2. Staging Area: A temporary area where you can prepare changes before committing them.
 # 3. Local Repository: A local copy of the entire project history, including all commits and branches.
@@ -63,6 +67,12 @@
 
 
 # 1. git init - Initializes a new Git repository in the current directory. 
-# It creates a .git directory that contains all the necessary files and metadata for version control.
-
+#    It creates a .git directory that contains all the necessary files and metadata for version control.
 # 2. git add <filename> - Adds changes in the specified file(s) to the staging area, preparing them for the next commit.
+# 3. git commit -m "commit message" - Creates a new commit with the changes in the staging area and associates it with a 
+#    descriptive message.   
+# 4. git status - Displays the current status of the working directory and staging area, showing which files have been modified, 
+#    added, or deleted.
+# 5. git remote add origin https://github.com/kartikcicd/DevOpsNewF.git
+# 6. git push -u origin main - Pushes the committed changes from the local repository to the remote repository on the specified 
+#    branch (main in this case).
